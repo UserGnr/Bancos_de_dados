@@ -1,0 +1,1 @@
+Este repositório destina-se ao aprendizado relacionado aos bancos de dados
