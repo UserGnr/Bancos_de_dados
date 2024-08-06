@@ -1,0 +1,78 @@
+Modelos de bancos de dados:
+- Descrever a estrutura de um banco de dados
+- Documentação dos sistemas
+- Informa quais os tipos de dados estão armazenados
+- Não informa os dados armazenados
+- Três níveis:
+    Conecitual
+    Lógico
+    Físico
+
+Modelo conceitual
+- Modelo de mais alto nível (mais próximo dos usuários)
+- Alto nível de abstração: requisitos do sistema
+- Elaborado de forma textual ou por meio do Diagrama de Entidade e Relacionamento e/ou Diagrama de Classes
+- Geralmente feito pelo analista de sistemas
+Exemplo:
+1) Clientes
+Dados necessários: nome completo, tipo de pessoa (física ou jurídica), endereço, bairro, cidade, estado, telefone, email e nome de contato
+2) Pedido
+Dados necessários: código do produto, quantidade, código do cliente e código do vendedor
+
+Modelo lógico
+- Como os dados serão armazenados no banco de dados e seus relacionamentos
+- Definição da tecnologia utilizada para armagenagem dos dados: bancos de dados relacionais ou não relacionais
+
+Modelo físico (Modelo de Implementação)
+- Como será feito a armazenagem do banco de dados
+- É utilizado alguma linguagem (comumente o SQL)
+- Qual será o Sistema Gerenciador de Banco de Dados (SGBD) utilizado, considerando o modelo lógico empregado
+
+Outros conceitos:
+Entidade:
+- Objeto ou evento do mundo real sobre o qual desejamos manter registros em um banco de dados
+Exemplos: Aluno, Carro, Produto, Vendedor, Venda, etc
+
+Atributo: 
+- Propriedade ou característica que descreve uma entidade
+- São as colunas(campos) das tabelas que irão armazenar os dados
+Exemplos:
+Entidade Produto: código, descrição e preço
+Entidade Tipo de Produto: código, descrição
+
+Atributo chave (chave primária, primary key ou pk):
+- Campo que deve possuir valor único (sem repetição) em todo o conjunto de dados da entidade
+- Este atributo é usado para identificar um registro da tabela
+
+Relacionamentos:
+ - Geralmente as entidades nunca estão sozinhas, normalmente estão associadas com outras entidades
+ - Reconhecer e registrar os relacionamentos entre entidades fornece uma descrição detalhada do modelo
+ - Um relacionamento pode acontecer entre uma, duas ou várias entidades
+
+Chave estrangeira (foreign key ou fk):
+- É um atributo presente em uma entidade que indica um relacionamento
+- representa a chave primária de outra entidade
+
+Grau de relacionamento: 
+- Indica a quantidade de entidades ligadas em um relacionamento
+- Principais graus de relacionamento: unário, binário e ternário
+- Dependendo da complexidade do projeto é possível existir relacionamentos com mais graus
+
+Relacionamento unário (grau 1): 
+Uma entidade que se relaciona com ela mesma
+
+Relacionamento binário (grau 2): 
+- Uma entidade se relaciona com outra entidade
+- Tipo mais comum de relacionamento
+
+Relacionamento ternário (grau 3):
+- Três entidades estão relacionadas por um mesmo relacionamento
+
+Cardinalidade (máxima):
+- Define a quantidade máxima de ocorrências de uma entidade, que poderá estar associada a outra entidade
+- Por exemplo:
+Um vendedor pode vender apenas um tipo de produto? Ou dois? Ou três?
+Um produto pode ser vendido por apenas um vendedor? Ou por todos?
+- Relacionamento Binário Um-para-Um (1:1 ou One-to-One): indica que uma ocorrência da entidade A pode se relacionar exclusivamente com uma ocorrência da entidade B e viceversa
+Exemplo: um vendedor ocupa um único escritório e um escritório pode ser ocupado por um único vendedor
+
