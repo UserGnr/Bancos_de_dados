@@ -1,0 +1,15 @@
+Normalização de dados
+
+- Processo formal e passo a passo que examina o documento descritivo gerado pelos analistas de sistemas durante a análise de requisitos em busca de definir as entidades, atributos, relacionamentos, chaves primárias e chaves estrangeiras do banco de dados para ser modelado
+- Utiliza regras bem estabelecidas
+- Objetiva evitar ou amenizar anomalias e inconsistências que podem ocorrem na inclusão, exclusão, alteração e consulta de registros em um banco de dados
+- A normalização reduz o trabalho de manutenção e ajuda a evitar o desperdício do espaço de armazenamento, etc
+
+Primeira forma normal (1FN):
+- Todos os campos atômicos(simples) e não multivalorados (com múltiplos valores)
+- Para evitar não atômicos e campos multivalorados pode-se dividir a informação em mais colunas ou criar outra tabela e fazer o relacionamento entre as tabelas
+- A primeira forma normal tenta resolver um dos maiores problemas de bancos dedados: repetição (redundância de dados) e a desorganização dos dados
+
+Segunda forma normal (2FN):
+- Tem que estar na 1FN
+- Todos os atributos não chave devem ser dependentes da chave primária, uma das maneiras de compreender é que, se precisar de informações de outras tabelas, o ideal é buscar na outra tabela, e não trazer a informação da outra tabela para a tabela
