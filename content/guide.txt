@@ -14,3 +14,4 @@ t2 - SQL
 2 - DQL - Data Query Language
 3 - DML - Data ManipulationLanguage
 4 - DDL - Data Definition Language
+5 - DCL - Data Control Language

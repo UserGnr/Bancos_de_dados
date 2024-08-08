@@ -1,0 +1,15 @@
+DCL - Data Control Language
+- Controla os aspectos de autorização de dados e licenças de usuários para controlar quem tem acesso para manipular dados dentro do banco de dados
+- Comandos:
+    GRANT (autorizar um usuário a executar ou setar operações no banco de dados)
+    REVOKE (remover ou restringir a capacidade de um usuário de executar operações)
+Exemplo:
+    Comando GRANT
+    GRANT SELECT ON tipos_produto TO fulano;
+        Comentário:
+        - Concede a permissão de acesso ao usuário 'fulano' na tabela 'tipos_produto'
+
+    Comando REVOKE
+    REVOKE CREATE TABLE FROM fulano;
+        Comentário:
+        - Concede a permissão de criar tabelas no banco de dados do usuário 'fulano'
