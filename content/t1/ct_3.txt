@@ -4,6 +4,10 @@ Normalização de dados
 - Utiliza regras bem estabelecidas
 - Objetiva evitar ou amenizar anomalias e inconsistências que podem ocorrem na inclusão, exclusão, alteração e consulta de registros em um banco de dados
 - A normalização reduz o trabalho de manutenção e ajuda a evitar o desperdício do espaço de armazenamento, etc
+- Deixar a estrutura de dados mais integra e exclusivamente
+- Evitar repetições desnecessárias e possíveis sobrecarga no gerenciador do banco de dados
+- Um modelo é considerado normalizado se estiver nas três primeiras formas (1FN, 2FN e 3FN)
+- A quarta e quinta forma de normalização é rara de ser utilizada
 
 Primeira forma normal (1FN):
 - Todos os campos atômicos(simples) e não multivalorados (com múltiplos valores)
@@ -13,3 +17,19 @@ Primeira forma normal (1FN):
 Segunda forma normal (2FN):
 - Tem que estar na 1FN
 - Todos os atributos não chave devem ser dependentes da chave primária, uma das maneiras de compreender é que, se precisar de informações de outras tabelas, o ideal é buscar na outra tabela, e não trazer a informação da outra tabela para a tabela
+
+Terceira forma normal (3FN):
+- Tem que estar na 2FN
+- Nenhuma coluna não-chave deve depender de outra coluna não-chave, ou seja, eliminar campos que podem ser obtidos pela equação de outros campos da mesma tabela
+
+Quarta forma normal (4FN):
+- Tem que estar na 3FN
+- Na tabela não deve conter multiplas entradas multivalorados (valores repetidos em diferentes colunas)
+
+
+Quinta forma normal (5FN):
+- Tem que estar na 4FN
+- Quando um atributo está em outra tabela sem a necessidade de estar na tabela pesquisada e pode ser removido sem a perda de nenhuma informação
+
+
+Obs.: é comum gerar novas tabelas a fim de satisfazer as formas normais que estão sendo aplicadas
