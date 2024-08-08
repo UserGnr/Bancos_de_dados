@@ -15,3 +15,4 @@ t2 - SQL
 3 - DML - Data ManipulationLanguage
 4 - DDL - Data Definition Language
 5 - DCL - Data Control Language
+6 - DTL - Data Transaction Language

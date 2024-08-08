@@ -1,0 +1,33 @@
+DTL - Data Transaction Language
+- Comandos:
+    BEGIN (ou START TRANSACTION dependendo do dialeto aceito) (marca o começo de uma transação que pode ser completada ou não)
+    COMMIT finaliza uma transação
+    ROLLBACK faz com que as mudanças nos dados existentes desde o último COMMIT sejam descartadas
+Exemplo:
+    Comando BEGIN
+    CREATE TABLE 'tipos_produtos' (codigo INT PRIMARY KEY, descricao VARCHAR(50));
+    BEGIN TRANSACTION; -- começamos a transação
+        INSERT INTO tipos_produtos VALUES ('Notebook');
+        INSERT INTO tipos_produtos VALUES ('Nobreak');
+    COMMIT; -- termina a transação e grava os dados
+    Comentário:
+    - Iniciando a transação, inserindo os dados e salvando no banco de dados
+
+    Comando COMMIT
+    CREATE TABLE 'tipos_produtos' (codigo INT PRIMARY KEY, descricao VARCHAR(50));
+    BEGIN TRANSACTION; -- começamos a transação
+        INSERT INTO tipos_produtos VALUES ('Notebook');
+        INSERT INTO tipos_produtos VALUES ('Nobreak');
+    COMMIT; -- termina a transação e grava os dados
+    Comentário:
+    - Iciando a transação, inserindo os dados e salvando no banco de dados.
+
+    Comando ROLLBACK
+    CREATE TABLE 'tipos_produtos' (codigo INT PRIMARY KEY, descricao VARCHAR(50));
+    BEGIN TRANSACTION; -- começamos a transação
+        INSERT INTO tipos_produtos VALUES ('Notebook');
+        INSERT INTO tipos_produtos VALUES ('Nobreak');
+    ROLLBACK; -- as inserções das linhas acima foram desfeitas
+    Comentário:
+    - Iniciando a transação, inserindo os dados mas o COMMIT não foi executado, mas sim o ROLLBACK
+    - As inserções foram desfeitas e não ficarão salvas no banco de dados
