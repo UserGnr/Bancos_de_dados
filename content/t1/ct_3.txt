@@ -31,5 +31,4 @@ Quinta forma normal (5FN):
 - Tem que estar na 4FN
 - Quando um atributo está em outra tabela sem a necessidade de estar na tabela pesquisada e pode ser removido sem a perda de nenhuma informação
 
-
-Obs.: é comum gerar novas tabelas a fim de satisfazer as formas normais que estão sendo aplicadas
+Obs.: é comum gerar novas tabelas a fim de atender as formas normais que estão sendo aplicadas

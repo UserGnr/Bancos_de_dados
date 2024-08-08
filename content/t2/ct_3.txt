@@ -1,6 +1,6 @@
 DML - Data ManipulationLanguage
 - Utilizado para realizar inclusões, alterações e exclusões de dados em registros do banco de dados
-Comandos:
+- Comandos:
     INSERT (inserir um registro em uma tabela existente)
     UPDATE (alterar valores de dados em um ou mais registros de uma tabela)
     DELETE (remover registros de uma tabela)

@@ -1,0 +1,26 @@
+DDL - Data Definition Language
+- Criar, alterar e excluir bancos de dados, tabelas e elementos como índice e visão
+- Comandos:
+    CREATE (criar um banco de dados, tabela e outros objetos em um banco de dados)
+    ALTER (alterar a estrutura de tabelas ou outro objeto em um banco de dados)
+    DROP (apagar bancos de dados, tabelas e outros objetos)
+Exemplo:
+
+    Comando CREATE
+    CREATE TABLE tipos_produto (codigo INT PRIMARY KEY, descricao VARCHAR(50));
+    Comentário:
+    - Cria a tabela 'tipos_produto' com os campos 'codigo' do tipo inteiro e como chave primária e o campo 'descricao' como char com até 50 caracteres
+
+    Comando ALTER
+    ALTER TABLE tipos_produto ADD peso DECIMAL(8,2);
+    Comentário:
+    - Altera o 'peso' para decimal com 8 casas antes da vírgula e duas depois na tabela 'tipos_produto'
+
+    Comando DROP
+    DROP TABLE tipos_produto;
+    Comentário:
+    - Apaga a tabela 'tipos_produto' desde que não tenha relacionamentos
+
+    DROP DATABASE financeiro;
+    Comentário:
+    - Apaga a base de dados e todas as tabelas dentro dele

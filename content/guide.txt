@@ -5,4 +5,12 @@ Folder: t_x         t -> tópic          x -> number
 File: ct_x        ct -> content       x -> number
 
 t1 - Conceitos iniciais
-1 - Modelagem conceitual, lógica e física e outros conceitos
+1 - Banco de dados relacional e não relacional
+2 - Modelagem conceitual, lógica e física e outros conceitos
+3 - Normalização de dados
+
+t2 - SQL
+1 - SQL
+2 - DQL - Data Query Language
+3 - DML - Data ManipulationLanguage
+4 - DDL - Data Definition Language

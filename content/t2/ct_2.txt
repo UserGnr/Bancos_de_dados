@@ -1,0 +1,22 @@
+DQL - Data Query Language
+- Consultas no banco de dados
+- É o mais utilizado
+- Possui apenas 1 comando, porém existem várias cláusulas e opções
+- É possível fazer buscas complexas
+- Comando: SELECT
+Exemplo:
+    SELECT * FROM tipos_produto;
+        Comentário:
+        - Todos os dados da tabela 'tipos_produto' será selecionado
+        - O asterisco '*' indica que se quer todos os campos da tabela
+        - O comando termina com o ponto e vígula ';' no final
+    
+    SELECT codigo, descricao FROM tipo_produto;
+        Comentário:
+        - Seleciona todos os dados da tabela 'tipos_produto'
+        - Os únicos campos especificados são 'codigo' e 'descricao'
+    
+    SELECT codigo AS cod, descricao AS desc FROM tipo_produto AS tp;
+        Comentário:
+        - Apelidando (alias) os campos e a tabela
+
