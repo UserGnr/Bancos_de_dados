@@ -7,4 +7,4 @@ SELECT p.codigo AS Código, p.descricao AS Descrição, p.preco AS Preço, tp.De
     FROM produtos AS p, tipos_produto AS tp
     WHERE p.codigo_tipo_produto = tp.codigo;
 
-OBS: Sempre que houver consulta com múltiplas tabelas, é necessário fazer a filtragem observando as chaves estrangeiras de uma tabela fazendo referência às chaves primárias da outra, independenteda quantidade de relacionamentos
+OBS: Sempre que houver consulta em múltiplas tabelas, é necessário fazer a filtragem observando as chaves estrangeiras de uma tabela fazendo referência às chaves primárias da outra, independente da quantidade de relacionamentos

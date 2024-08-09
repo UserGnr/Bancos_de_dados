@@ -1,0 +1,42 @@
+Funções de agregação
+
+- Processa um conjunto de valores contidos em uma única coluna de uma tabela e retorna um único valor como resultado
+- Podemos informar no comando SELECT uma ou mais funções de agregação
+- nome-da-funcao(coluna)
+
+
+Principais funções de agregação:
+max() retorna o maior preço de venda da tabela produtos
+    Ex 1:
+    SELECT MAX(preco_venda) FROM produtos;
+
+    Ex 2:
+    SELECT id_categoria, MAX(preco_venda) FROM produtos GROUP BY id_categoria;
+
+    Ex 3:
+    SELECT id_categoria, MAX(preco_venda) FROM produtos GROUP BY id_categoria HAVING MAX(preco_venda) > 10;
+    HAVING: tendo
+
+min() analisa um conjunto de valores e retorna o menor entre eles
+    Ex 1:
+    SELECT MIN(preco_venda) FROM produtos;
+
+
+sum() realiza a soma dos valores em uma única coluna e retorna esse resultado
+    Ex 1:
+    SELECT SUM(preco_venda) FROM produtos WHERE id_categoria = 1;
+
+avg() calcular a média aritmética dos valores em uma única coluna
+    Ex 1:
+    SELECT AVG(preco_venda) FROM produtos;
+
+round() para arredondar valores e especificar quantas casasdecimais mostrar
+    Ex 1:
+    SELECT ROUND(AVG(preco_venda), 2) FROM produtos;
+
+count() retorna o total de linhas selecionadas
+    - Podemos passar como parâmetro o nome da coluna ou um asterisco
+    Por padrão, quando informado o nome de uma coluna, valores do tipo NULL são ignorados, mas quando é informado um asterisco (*) todas as linhas serão contabilizadas
+    Ex 1:
+    SELECT COUNT(preco_venda) AS Quantidade FROM produtos WHERE id_categoria=1;
+    
