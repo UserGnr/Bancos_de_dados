@@ -1,0 +1,29 @@
+Subconsultas
+
+- A grande maioria das consultas são simples
+- Subconsultas ou subqueries são consultas com maior complexidade
+- Subconsulta nada mais é do que uma instrução SELECT dentro de outro SELECT que retorna algumas colunas específicas que são usadas em algumas funções como INSERT, UPDATE e DELETE por exemplo
+- Subconsulta SQL é chamada de consulta interna
+- A consulta que contém a subconsulta é chamada de consulta externa
+
+Ex 1:
+SELECT nome, sobrenome
+    FROM funcionarios
+    WHERE id_escritorio IN (SELECT id FROM escritorios WHERE pais = 'Brasil');
+
+Ex 2 (mesmo exemplo porém sem subquery):
+SELECT nome, sobrenome FROM funcionarios, escritorios AS e WHERE id_escritorio = e.id AND e.pais ='Brasil';
+
+Ex 3:
+SELECT f.nome, f.sobrenome, e.pais, p.salario
+    FROM pagamentos AS p, funcionarios AS f, escritorios AS e
+    WHERE f.id_escritorio = e.id
+        AND f.id = p.id_funcionario
+        AND salario = (SELECT MAX(salario) FROM pagamentos);
+
+Ex 4:
+SELECT f.nome, f.sobrenome, e.pais, p.salario
+    FROM pagamentos AS p, funcionarios AS f, escritorios AS e
+    WHERE f.id_escritorio = e.id
+        AND f.id = p.id_funcionario
+        AND salario < (SELECT AVG(salario) FROM pagamentos);
