@@ -1,0 +1,7 @@
+Filtrar consulta com WHERE
+
+SELECT * FROM tipos_produto WHERE codigo = 1;
+Seleciona todos os dados da tabela 'tipos_produto' onde o código do tipo de produto é igual a 1
+
+SELECT * FROM produtos WHERE descricao = 'Laptop';
+Seleciona todos os dados da tabela 'produtos' onde a descrição do produto é igual a 'Laptop'

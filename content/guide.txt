@@ -11,8 +11,17 @@ t1 - Conceitos iniciais
 
 t2 - SQL
 1 - SQL
-2 - DQL - Data Query Language
-3 - DML - Data ManipulationLanguage
-4 - DDL - Data Definition Language
-5 - DCL - Data Control Language
-6 - DTL - Data Transaction Language
+2 - DQL (Data Query Language)
+3 - DML (Data ManipulationLanguage)
+4 - DDL (Data Definition Language)
+5 - DCL (Data Control Language)
+6 - DTL (Data Transaction Language)
+
+t3 - SQL (2° parte)
+1 - Filtrar consulta com WHERE
+2 - Consultas em multiplas tabelas
+3 - Junção de tabelas
+4 - Funções de agregação
+5 - Agrupamento e ordenação
+6 - Data e hora
+7 - Subconsultas
