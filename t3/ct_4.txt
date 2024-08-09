@@ -4,7 +4,6 @@ Funções de agregação
 - Podemos informar no comando SELECT uma ou mais funções de agregação
 - nome-da-funcao(coluna)
 
-
 Principais funções de agregação:
 max() retorna o maior preço de venda da tabela produtos
     Ex 1:
@@ -20,7 +19,6 @@ max() retorna o maior preço de venda da tabela produtos
 min() analisa um conjunto de valores e retorna o menor entre eles
     Ex 1:
     SELECT MIN(preco_venda) FROM produtos;
-
 
 sum() realiza a soma dos valores em uma única coluna e retorna esse resultado
     Ex 1:
@@ -39,4 +37,3 @@ count() retorna o total de linhas selecionadas
     Por padrão, quando informado o nome de uma coluna, valores do tipo NULL são ignorados, mas quando é informado um asterisco (*) todas as linhas serão contabilizadas
     Ex 1:
     SELECT COUNT(preco_venda) AS Quantidade FROM produtos WHERE id_categoria=1;
-    

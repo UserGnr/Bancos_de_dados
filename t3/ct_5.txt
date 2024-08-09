@@ -1,0 +1,45 @@
+Agrupamento e ordenação
+
+- GROUP BY para agrupar elementos do mesmo tipo
+    Ex 1:
+    SELECT t.nome AS Tipo, SUM(p.quantidade) AS 'Quantidade em Estoque' FROM tipos AS t, produtos AS p
+    WHERE t.id = p.id_tipo GROUP BY t.nome; 
+
+    Ex 2:
+    SELECT f.nome AS Fabricante, SUM(p.quantidade) AS 'Quantidade em Estoque' FROM fabricantes AS f,
+    produtos AS p WHERE f.id = p.id_fabricante GROUP BY f.nome; 
+
+    Ex 3:
+    SELECT t.nome AS Tipo, f.nome AS Fabricante, SUM(p.quantidade) AS 'Quantidade em Estoque'
+    FROM tipos AS t, fabricantes AS f, produtos AS p
+    WHERE t.id = p.id_tipo AND f.id = p.id_fabricante
+    GROUP BY t.nome, f.nome;
+
+    Ex 4:
+    SELECT t.nome AS Tipo, f.nome AS Fabricante, SUM(p.quantidade) AS 'Quantidade em Estoque'
+    FROM tipos AS t, fabricantes AS f, produtos AS p
+    WHERE t.id = p.id_tipo AND f.id = p.id_fabricante
+    GROUP BY t.nome, f.nome
+    HAVING SUM(p.quantidade) > 200; 
+
+    Ex 5:
+    SELECT t.nome AS Tipo FROM produtos AS p, tipos AS t WHERE t.id = p.id_tipo GROUP BY t.nome;
+
+- ORDER BY organiza os dados em ordem alfabética ou numérica
+    A ordenação pode ser ASC (Ascendente) ou DESC (Descendente) 
+    Por padrão, a ordenação é ascendente
+    Por padrão, a ordenação é ascendente pela chave primária da tabela
+    Para realizar a ordenação padrão trazendo todos os campos basta utilizar *, mas para ordenar por um campo específico ou mesmo mudar a forma de ordenação, deve-se informar os campos
+
+    Ex 1:
+    SELECT id, nome, id_tipo, id_fabricante, quantidade FROM produtos;
+
+    Ex 2:
+    SELECT id, nome, id_tipo, id_fabricante, quantidade FROM produtos ORDER BY id ASC;
+
+    Ex 3:
+    SELECT id, nome, id_tipo, id_fabricante, quantidade FROM produtos ORDER BY id DESC;
+
+    Ex 4:
+    SELECT id, nome, id_tipo, id_fabricante, quantidade FROM produtos ORDER BY quantidade DESC;
+    
