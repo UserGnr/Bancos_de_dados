@@ -1,0 +1,126 @@
+Junção de tabelas
+
+- Existem várias formas de consulta, como a vista no arquivo anterior
+- Em um banco de dados pode haver mais de duas tabelas relacionadas
+- É comum fazer consultas entre diferentes tabelas
+- Para saber qual a melhor forma de consulta é necessário definir os critérios de agrupamento
+- As junções criam uma pseudo-tabela derivada de duas ou mais tabelas de acordo com as regras especificadas, e que são parecidas com as regras da Teoria dos Conjuntos
+- As diferentes junções muitas vezes são formas diferentes de se fazer a mesma coisa
+- Para saber qual utilizar é bom ter bem definido os critérios necessários para a consulta
+
+Tabela para os exemplos:
+___________________________________________________________
+CREATE DATABASE juncao,
+
+USE juncao;
+
+CREATE TABLE profissoes(
+    id INT NOT NULL AUTO_INCREMENT,
+    cargo VARCHAR(60) NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE clientes(
+    id INT NOTNULL AUTO_INCREMENT,
+    nome VARCHAR(60) NOT NULL,
+    data_nascimento DATE NOT NULL,
+    telefone VARCHAR(60) NOT NULL,
+    id_profissao int NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id_profissao) REFERENCES profissoes(id)
+
+INSERT INTO profissoes(cargo) VALUES ('Programador');
+INSERT INTO profissoes(cargo) VALUES ('Analista de sistemas');
+INSERT INTO profissoes(cargo) VALUES ('Suporte');
+INSERT INTO profissoes(cargo) VALUES ('Gerente');
+
+INSERT INTO clientes(nome, data_nascimento, telefone, id_profissao) VALUES ('João Pereira', '1981-06-15', '123-5688', 1);
+INSERT INTO clientes(nome, data_nascimento, telefone, id_profissao) VALUES ('Ricardo da Silva', '1973-10-10', '2234-5669', 2);
+INSERT INTO clientes(nome, data_nascimento, telefone, id_profissao) VALUES ('Felipe Oliveira', '1987-08-01', '4234-5640', 3);
+INSERT INTO clientes(nome, data_nascimento, telefone, id_profissao) VALUES ('Mário Pirez', '1991-02-05', '5234-5621', 1);
+);
+___________________________________________________________
+
+Junção de produto cartesiano
+- Junção entre duas tabelas que origina uma terceira tabela constituída por todos os elementos da primeira combinadas com todos os elementos da segunda
+- É uma junção entre duas tabelas que origina uma terceira tabela constituída por todos os elementos da primeira tabela combinada com todos os elementos da segunda
+
+SELECT c.id, c.nome, c.data_nascimento, c.telefone, p.cargo
+    FROM clientes AS c, profissoes AS p
+    WHERE c.id_profissao = p.id;
+
+Junção Interna (Inner Join)
+- Uma consulta que retorna apenas os dados que atendem às condições de junção, isto é, quais linhas de uma tabela se relacionam com as linhas de outras tabelas
+- É utilizado a cláusula ON, é semelhante a cláusula WHERE
+- Todas as linhas de uma tabela se relacionam com todas as linhasde outras tabelas se elas tiverem ao menos 1 campo em comum
+
+SELECT c.id, c.nome, c.data_nascimento, c.telefone, p.cargo
+FROM clientes AS c INNER JOIN profissoes AS p
+ON c.id_profissao = p.id;
+
+- No exemplo acima é o mesmo resultado que a junção por produto cartesiano
+
+Junção Externa (Outer Join)
+- Consulta que não requer que os registros de uma tabela possuam registros equivalentes em outra
+- Este tipo de junção se subdivide dependendo da tabela da qual é admitida os registros que não possuem correspondência: tabela da esquerda, direita ou ambas
+- O resultado desta consulta sempre contém todos os registros da tabela esquerda(ou seja, a primeira tabela mencionada na consulta), mesmo quando não exista registros correspondentes na tabela direira
+- Retorna todos os valores da tabela esquerda comos valores da tabela direita correspondente, ou quando não há correspondência retorna um valor NULL
+
+Junção Externa (Outer Join) com Left Outer Join
+- Traz todos os registros da tabela esqueda mesmo quando não exista registros correspondentes na tabela direita
+
+SELECT * FROM clientes
+LEFT OUTER JOIN profissoes
+ON clientes.id_profissao = profissoes.id;
+
+Junção Externa (Outer Join) com Right Outer Join
+- Esta consulta é inversa à anterior e retorna sempre todos os registros da tabela à direita(a segunda tabela mencionada na consulta), mesmo se não existir registro correspondentenatabela à esquerda. Nestes casos, o valor NULL é retornado quando não há correspondência
+- Traz todos os registros da tabela direita mesmo quando não exista registros correspondentes na tabela esquerda
+
+SELECT * FROM clientes
+RIGHT OUTER JOIN profissoes
+ON clientes.id_profissao = profissoes.id;
+
+Junção Externa (Outer Join) com Full Outer Join
+- Apresenta todos os dados das tabelas à esquerda e à direita, mesmo que não possuam correspondência em outra tabela
+- A tabela combinada possuirá todos os registros de ambas as tabelas e apresentará os valores nulos para os registros sem correspondência.
+- Essa junção não funciona no MySQL mas pode ser simulada utilizando um LEFT JOIN e um RIGHT JOIN
+- Apresenta todos os dados das tabelas à esquerda e à direita, mesmo que não possuam correspondência em outra tabela
+
+SELECT * FROM clientes
+FULL OUTER JOIN profissoes
+ON clientes.id_profissao = profissoes.id;
+
+Para o MySQL:
+SELECT * FROM clientes
+LEFT OUTER JOIN profissoes
+ON clientes.id_profissao = profissoes.id
+UNION
+SELECT * FROM clientes
+RIGHT OUTER JOIN profissoes
+ON clientes.id_profissao = profissoes.id;
+
+Junção Cruzada (Cross Join)
+- Junta duas ou mais tabelas por cruzamento
+- Para cada linha de uma tabela queremos todos os dados da outra tabela ou vice-versa
+- É uma junção entre todos os campos de ambas as tabelas
+
+SELECT c.id, c.nome, c.data_nascimento, c.telefone, p.cargo
+FROM clientes AS c
+CROSS JOIN profissoes AS p;
+
+Neste exemplo, para cada cliente é colocadado um linha com cada profissão
+
+Auto Junção (Self Join)
+- Auto junção de uma tabela a si mesma
+- Realiza uma auto junção da própria tabela
+
+Junção Baseada em Comparador (Equi-Join)
+- Junção baseada em comparador, que usa apenas comparações de igualdade na junção
+- Traz todos os registros das tabelas utilizando operador de comparação
+
+Junção Natutal (Natural Join)
+- É um caso especial de Equi-Join
+- O resultado desta junção é o conjunto de todas as combinações que são iguais em seus nomes de atributos comuns
+- Esta junção só 'funciona' bem se os campos chaves (onde acontece os relacionamentos) tiveremomesmo nome em ambas as tabelas
+- Traz todos os registros das tabelas de acordo com os nomes de atributos em comum
