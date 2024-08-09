@@ -1,0 +1,120 @@
+Data e hora
+
+CURDATE() retorna a data atual no formato aaaa-mm-dd
+    Ex 1:
+    SELECT CURDATE() AS 'Data Atual';
+
+CURTIME() retorna a hora atual no formato hh:mm:ss
+    Ex 1:
+    SELECT CURTIME() AS 'Hora Atual';
+
+CURRENT_TIME() é o mesmo que CURTIME()
+    Ex 1:
+    SELECT CURRENT_TIME() AS 'Hora Atual';
+
+DATE_ADD(data, intervalo)
+    Adiciona um intervalo na data
+    O intervalo pode ser uma data seguida deumhorário
+    O intervalo a ser somado pode ser em dias, dias e horas e minutos, dias e segundos, minutos e segundos e etc
+    Ex 1:
+    SELECT DATE_ADD(CURDATE(), INTERVAL 3 DAY) AS 'Data de Vencimento';
+
+DATE_SUB(data, intervalo)
+    Subtrai um intervalo na data
+    A data pode ser uma data seguida de um horário
+    O intervalo a ser somado pode ser em dias, dias e horas e minutos, dias e segundos, minutos e segundos e etc
+    Ex 1:
+    SELECT DATE_SUB(CURDATE(), INTERVAL 10 DAY) AS 'Data de Matrícula';
+
+DATEDIFF(expressão1, expressão2) retorna o valor da diferença entre 'expressão1' e 'expressão2', podendo ambos serem uma data ou data e hora
+    EX 1:
+    SELECT DATEDIFF(CURDATE(), DATE_SUB(CURDATE(), INTERVAL 10 DAY)) AS'DiasemAtraso';
+
+DATE_FORMAT(data, formato) retorna a data no formato especificado
+    Ex 1:
+    SELECT DATE_FORMAT(CURDATE(), '%d/%m/%Y') AS 'Data Formatada';
+
+DAYNAME(data) retorna o dia da semana para a data
+    Ex 1:
+    SELECT DAYNAME(CURDATE()) AS 'Dia da Semana';
+
+DAYNAME(data) dia da semana da data
+    Ex 1:
+    SELECT DAYNAME(CURDATE()) AS 'Dia da Semana';
+
+    Ex 2:
+    SET lc_time_names = 'pt_BR';
+    SELECT DAYNAME(CURDATE()) AS 'Dia da Semana';
+
+DAYOFMONTH(data) retorna o dia do mês para a data
+    Ex 1:
+    SELECT DAYOFMONTH(CURDATE()) AS 'Dia do Mês';
+
+DAYOFWEEK(data) retorna o dia da semana da data em número
+    Ex 1:
+    SELECT DAYOFWEEK(CURDATE()) AS 'Dia da Semana';
+
+DAYOFYEAR(data) retorna o dia do ano para a data
+    Ex 1:
+    SELECT DAYOFYEAR(CURDATE()) AS 'Dia do Ano';
+
+FROM_DAYS(n) retorna a data real referente a um número 'n' em dias
+    Esta função funcionasomentecomoCalendário Gregoriano
+    Ex 1:
+    SELECT FROM_DAYS(780500) AS 'Data Real';
+
+NOW() retorna a data e hora atuais
+    Ex 1:
+    SELECT NOW() AS 'Data/Hora Atual';
+
+    Ex 2:
+    SELECT DATE_FORMAT(NOW(), '%d/%m/%Y %h:%m:%s') AS 'Data/Hora Atual';
+
+CURRENT_TIMESTAMP() faz o mesmo que NOW()
+    Ex 1:
+    SELECT DATE_FORMAT(CURRENT_TIMESTAMP(), '%d/%m/%Y %h:%m:%s') AS'Data/HoraAtual'
+
+TIME() extrair a hora de uma data
+    Ex 1:
+    SELECT TIME(CURRENT_TIMESTAMP()) AS 'Hora';
+
+SEC_TO_TIME(segundos) recebe um valor em segundos e retorna esse valor convertido em horas, minutos e segundos
+    Ex 1:
+    SELECT SEC_TO_TIME(2000) AS 'Tempo Total';
+
+TIME_TO_SEC(hora) converte a hora recebida em segundos
+    Ex 1:
+    SELECT TIME_TO_SEC('00:32:44') AS 'Em segundos';
+
+HOUR(hora), MINUTE(hora), SECOND(hora) retornam a hora, minuto e segundo da hora recebida como parâmetro
+    Ex 1:
+    SELECT HOUR('12:30:34') AS Hora, MINUTE('12:30:34') AS Minutos, SECOND('12:30:34') 
+
+PERIOD_DIFF(periodo1, periodo2) retorna o número de meses entre os dois período, que devem estar no formato AAMM ou AAAAMM
+    Ex 1:
+    SELECT period_diff(201912, 201903) AS 'Meses Restantes';
+
+TIME_DIFF(hora1, hora2) calcula a diferença entre a hora 1 e hora 2
+    Ex 1:
+    SELECT TIMEDIFF('12:35:34', '12:30:46') AS Diferença;
+
+QUARTER(data) retorna o trimestre do ano para a data
+    SELECT QUARTER('2019-03-17') AS 'Trimestre do ano';
+
+WEEK(data) retorna a semana do ano para a data
+    Ex 1:
+    SELECT WEEK('2019-03-17') AS 'Semana do Ano';
+
+WEEKDAY(data) retorna o dia da semana que inicia com segunda-feira para uma data
+    Ex 1:
+    SELECT WEEKDAY('2019-03-17') AS 'Dia da Semana';
+
+YEAR(data) retorna o ano de uma data
+    Ex 1:
+    SELECT YEAR('2019-03-17') AS 'Ano';
+
+MONTH(data) retorna o mês de uma data
+    SELECT MONTH('2019-03-17') AS 'Mês';
+
+DAY(data) retorna o dia de uma data
+    SELECT DAY('2019-03-17') AS 'Dia';
