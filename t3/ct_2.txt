@@ -1,0 +1,10 @@
+Consultas em multiplas tabelas
+
+- Qunado há relacioanamento entre tabelas, os dados estão espalhados. Diante nisso, quando é necessário realizar consultas, é preciso fazer buscas em multiplas tabelas simultâneamente 
+- Facilita a visualização dos dados relacionados uma vez que será mostrado o resultado em si e não a chave estrangeira usada
+
+SELECT p.codigo AS Código, p.descricao AS Descrição, p.preco AS Preço, tp.Descrição AS Tipo
+    FROM produtos AS p, tipos_produto AS tp
+    WHERE p.codigo_tipo_produto = tp.codigo;
+
+OBS: Sempre que houver consulta com múltiplas tabelas, é necessário fazer a filtragem observando as chaves estrangeiras de uma tabela fazendo referência às chaves primárias da outra, independenteda quantidade de relacionamentos
