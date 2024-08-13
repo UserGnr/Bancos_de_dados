@@ -25,3 +25,6 @@ t3 - SQL (2° parte)
 5 - Agrupamento e ordenação
 6 - Data e hora
 7 - Subconsultas
+
+t4 - MySQL
+1 - Donwload e instalação

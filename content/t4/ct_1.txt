@@ -1,0 +1,31 @@
+Download
+
+Parte 1: donwload e instalação
+    - Link: https://www.mysql.com/downloads/
+    - Caminho: MySQL Community (GPL) Downloads → MySQL Community Server → No thanks, just start my download.
+    - Instalação: normal, porém não se esqueça da senha do usuário root que será definida
+
+Parte 2: configurar as variáveis de ambiente
+    - Adicionar o caminho da pasta 'bin' de onde foi instalado
+
+Parte 3:
+1 -Iniciar o console MySQL:
+    mysql -u root -p
+
+2 Criar um usuário (comando DDL):
+    CREATE USER 'nome'@'localhost' IDENTIFIED BY 'senha';
+
+    nome: nome do usuário que poderá acessar o servidor apenas localmente(localhost)
+    senha: criação de uma senha para o 'nome'
+    obs.: para fazer uso desse usuário utiliza-se o comando: mysql -u geek -p
+
+3 Conceder privilégios (comando DLC):
+    GRANT ALL PRIVILEGES ON *.* TO 'nome'@'localhost' WITH GRANT OPTION;
+
+    Concedendo privilégio total para todos os bancos de dados e todas as tabelas para o usuário 'nome'
+    *.* usado para dar acesso total a todos os bancos de dados e todas as tabelas
+
+4 Recarregar as configurações de privilégios:
+    FLUSH PRIVILEGES;
+    
+    Garante que sejam aplicados a criação do usuário e os privilégios
