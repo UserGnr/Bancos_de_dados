@@ -1,6 +1,6 @@
 CREATE DATABASE db_ex1;
 
-USE ex1;
+USE db_ex1;
 
 CREATE TABLE tipos_produto(
 	codigo INT NOT NULL AUTO_INCREMENT,
@@ -33,3 +33,8 @@ SELECT codigo, descricao FROM tipos_produto WHERE codigo = 2;
 
 SELECT * FROM produtos WHERE descricao = 'Laptop';
 SELECT codigo, descricao, codigo_tipo FROM produtos WHERE preco <= 500;
+
+-- Consulta em múltiplas tabelas
+SELECT p.codigo AS 'Codigo', p.descricao AS 'Descricao', p.preco AS 'Preco', tp.descricao AS 'Tipo Produto'
+	FROM produtos AS p, tipos_produto AS tp
+    WHERE p.codigo_tipo = tp.codigo;
