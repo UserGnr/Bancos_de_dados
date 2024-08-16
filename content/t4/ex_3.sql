@@ -28,23 +28,23 @@ INSERT INTO produtos (descricao, preco_venda, preco_custo, id_categoria) VALUES 
 INSERT INTO produtos (descricao, preco_venda, preco_custo, id_categoria) VALUES ('Pendrive 32GB', '120.54', '32.55', 2);
 INSERT INTO produtos (descricao, preco_venda, preco_custo, id_categoria) VALUES ('Mouse', '17.00', '4.30', 2);
 
--- max
+-- MAX
 SELECT MAX(preco_venda) FROM produtos;
 
--- min
+-- MIN
 SELECT MIN(preco_venda) FROM produtos;
 
--- avg
+-- AVG
 SELECT AVG(preco_venda) FROM produtos;
 
--- round
+-- ROUND
 SELECT ROUND(AVG(preco_venda), 2) FROM produtos;
 
--- count
+-- COUNT
 SELECT COUNT(preco_venda) AS Quantidade FROM produtos WHERE id_categoria = 1;
 
--- group by
+-- GROUP BY
 SELECT id_categoria, MAX(preco_venda) FROM produtos GROUP BY id_categoria;
 
--- having
+-- HAVING
 SELECT id_categoria, MAX(preco_venda) FROM produtos GROUP BY id_categoria HAVING MAX(preco_venda) > 10;
