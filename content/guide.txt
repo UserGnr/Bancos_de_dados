@@ -28,3 +28,9 @@ t3 - SQL (2° parte)
 
 t4 - MySQL
 1 - Donwload e instalação
+ex_1 - Criação, adição e seleção
+ex_2 - Junções
+ex_3 - Funções de agregação
+ex_4 - Ordenação
+ex_5 - Data e hora
+ex_6 - Subconsultas
