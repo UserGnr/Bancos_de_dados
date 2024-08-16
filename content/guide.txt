@@ -10,14 +10,14 @@ t1 - Conceitos iniciais
 3 - Normalização de dados
 
 t2 - SQL
+t2_1 - SQL (1° parte)
 1 - SQL
 2 - DQL (Data Query Language)
 3 - DML (Data ManipulationLanguage)
 4 - DDL (Data Definition Language)
 5 - DCL (Data Control Language)
 6 - DTL (Data Transaction Language)
-
-t3 - SQL (2° parte)
+t2_2 - SQL (2° parte)
 1 - Filtrar consulta com WHERE
 2 - Consultas em multiplas tabelas
 3 - Junção de tabelas
@@ -26,7 +26,7 @@ t3 - SQL (2° parte)
 6 - Data e hora
 7 - Subconsultas
 
-t4 - MySQL
+t3 - MySQL
 1 - Donwload e instalação
 2 - Criação, adição e seleção
 3 - Junções
@@ -34,3 +34,5 @@ t4 - MySQL
 5 - Ordenação
 6 - Data e hora
 7 - Subconsultas
+
+t4 - PostgreSQL
