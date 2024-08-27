@@ -1,0 +1,18 @@
+Downlaod: https://www.postgresql.org/download/
+    É necessário lembrar a senha utilizada
+Após instalar é necessário adicionar no path no sistema
+    Utilizar a paste bin de onde foi instalado o PostgreSQL
+    Adicionar o path na nas variáveis de ambiente no path do sistema
+
+Prompt
+PASSO 1:
+    Comando: psql
+        Verifica se está sendo usado o path do sistema
+PASSO 2:
+    Comando: psql -U postgresql
+        Após isso pedirá a senha
+PASSO 3:
+Comando: \q
+    Sai
+
+pgAdmin4: pode ser instalado juntamente com o PostgreSQL e é utilizado para gerenciar as bases de dados
