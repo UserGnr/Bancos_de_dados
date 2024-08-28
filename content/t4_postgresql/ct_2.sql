@@ -44,7 +44,7 @@ CREATE TABLE turmas(
 	id_professor INT REFERENCES professores(id) NOT NULL
 );
 
--- INSERTS
+-- INSERT
 -- Tipos produtos
 INSERT INTO tipos_produto (descricao) VALUES ('Computadores');
 INSERT INTO tipos_produto (descricao) VALUES ('Impressoras');
