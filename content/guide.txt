@@ -46,8 +46,8 @@ t4 - PostgreSQL
 Reaplicando:
 8 - CREATE, CREATE, INSERT, SELECT, WHERE e AS(alias)
 9 - Junções
-10 - 
-11 - 
+10 - Funções de agregação
+11 - GROUP BY, HAVING e ORDER BY
 12 - 
 13 - 
 14 - 
