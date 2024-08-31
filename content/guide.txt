@@ -44,8 +44,8 @@ t4 - PostgreSQL
 6 - DCL
 7 - DTL
 Reaplicando:
-8 - 
-9 - 
+8 - CREATE, CREATE, INSERT, SELECT, WHERE e AS(alias)
+9 - Junções
 10 - 
 11 - 
 12 - 
