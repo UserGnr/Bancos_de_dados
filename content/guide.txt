@@ -39,3 +39,17 @@ t4 - PostgreSQL
 1 - Download e instalação
 2 - Criação, adição e seleção
 3 - DQL
+4 - DML
+5 - DDL
+6 - DCL
+7 - DTL
+Exemplo
+8 - 
+9 - 
+10 - 
+11 - 
+12 - 
+13 - 
+14 - 
+15 - 
+16 - 
