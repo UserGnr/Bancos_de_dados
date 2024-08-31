@@ -43,7 +43,7 @@ t4 - PostgreSQL
 5 - DDL
 6 - DCL
 7 - DTL
-Exemplo
+Reaplicando:
 8 - 
 9 - 
 10 - 
