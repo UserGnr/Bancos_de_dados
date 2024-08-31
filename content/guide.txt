@@ -48,7 +48,7 @@ Reaplicando:
 9 - Junções
 10 - Funções de agregação
 11 - GROUP BY, HAVING e ORDER BY
-12 - 
+12 - Data e hora
 13 - 
 14 - 
 15 - 
