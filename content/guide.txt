@@ -63,3 +63,4 @@ t5 - SQLite
 10 - Junções
 11 - Funções de agregação
 12 - GROUP BY, HAVING e ORDER BY
+13 - Data e hora
