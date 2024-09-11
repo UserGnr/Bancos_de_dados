@@ -60,3 +60,5 @@ t5 - SQLite
 7 - BEGIN TRANSACTION, COMMIT e ROLLBACK - DTL
 8 - CREATE, INSERT, SELECT e ALIAS
 9 - Consulta em multiplas tabelas
+10 - Junções
+11 - 
