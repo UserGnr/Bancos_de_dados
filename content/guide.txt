@@ -61,4 +61,4 @@ t5 - SQLite
 8 - CREATE, INSERT, SELECT e ALIAS
 9 - Consulta em multiplas tabelas
 10 - Junções
-11 - 
+11 - Funções de agregação
