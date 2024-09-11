@@ -26,7 +26,7 @@ INSERT INTO produtos (descricao, preco, codigo_tipo) VALUES ('Impr. Laser', '500
 SELECT * FROM tipos_produto;
 
 -- b) Já temos a tabela tipos_produto, então podemos iniciar a transação;
--- BEGINa TRANSACTIONa
+-- BEGIN TRANSACTION
 BEGIN TRANSACTION;
 
 	INSERT INTO tipos_produto (descricao) VALUES ('Notebook');

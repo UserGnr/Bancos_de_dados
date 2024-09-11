@@ -26,7 +26,7 @@ SELECT codigo, descricao FROM tipos_produto;
 SELECT * FROM produtos;
 SELECT codigo, descricao, codigo_tipo FROM produtos;
 
--- Erro Select
+-- Erro SELECT
 SELECT cod, desc, pre, ctp FROM produtos;
 
 -- ALIAS 
