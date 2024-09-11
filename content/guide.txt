@@ -43,9 +43,14 @@ t4 - PostgreSQL
 5 - DDL
 6 - DCL
 7 - DTL
-8 - CREATE, CREATE, INSERT, SELECT, WHERE e AS(alias)
+8 - CREATE, INSERT, SELECT, WHERE e AS(alias)
 9 - Junções
 10 - Funções de agregação
 11 - GROUP BY, HAVING e ORDER BY
 12 - Data e hora
 13 - Subconsultas
+
+t5 - SQLite
+1 - Download e instalação
+2 - CREATE, INSERT, SELECT
+3 - CREATE, INSERT, SELECT e AS(alias)

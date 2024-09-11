@@ -1,0 +1,15 @@
+Download
+
+PASSO 1:
+1° - Downlaod: https://www.sqlite.org/download.html
+2° - Instale o Precompiled Binaries for Windows: o sqlite-dll-win e o sqlite-tools
+3° - É necessário extrair os arquivos e colocar o conteúdo deles em uma mesma pasta
+
+PASSO 2:
+1° - É necessário adicionar o path na nas variáveis de ambiente no path do sistema
+
+PASSO 3:
+1° - Acessar o terminal e digiar o comando: sqlite3 —version 
+        Verifica se está sendo usado o path do sistema
+
+Donload do 'db browser for sqlite': https://sqlitebrowser.org/dl/
