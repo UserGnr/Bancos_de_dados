@@ -59,3 +59,4 @@ t5 - SQLite
 6 - GRANT e REVOKE - DCL
 7 - BEGIN TRANSACTION, COMMIT e ROLLBACK - DTL
 8 - CREATE, INSERT, SELECT e ALIAS
+9 - Consulta em multiplas tabelas

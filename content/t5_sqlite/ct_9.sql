@@ -1,3 +1,5 @@
+-- Consulta em multiplas tabelas
+
 -- CREATE
 CREATE TABLE tipos_produto(
 	codigo INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -21,10 +23,11 @@ INSERT INTO produtos (descricao, preco, codigo_tipo) VALUES ('Impr. Jato Tinta',
 INSERT INTO produtos (descricao, preco, codigo_tipo) VALUES ('Impr. Laser', 500, 2);
 
 -- SELECT
-SELECT * FROM tipos_produto WHERE codigo = 1;
-SELECT codigo, descricao FROM tipos_produto WHERE descricao = 'Computador';
-SELECT * FROM produtos WHERE preco <= 300;
-SELECT codigo, descricao, codigo_tipo FROM produtos WHERE descricao = 'Laptop';
+SELECT * FROM tipos_produto;
+SELECT * FROM produtos;
 
--- ALIAS
-SELECT p.codigo AS cod, p.descricao AS desc, p.preco AS pre, p.codigo AS ctp FROM produtos AS p WHERE p.codigo = 3;
+-- Consulta em multiplas tabelas
+SELECT p.codigo AS 'Codigo', p.descricao AS 'Descricao', p.preco AS 'Preco', tp.descricao AS 'Tipo Produto' 
+	FROM produtos AS p, tipos_produto AS tp
+    WHERE p.codigo_tipo = tp.codigo;
+	
