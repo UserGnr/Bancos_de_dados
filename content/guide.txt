@@ -62,3 +62,4 @@ t5 - SQLite
 9 - Consulta em multiplas tabelas
 10 - Junções
 11 - Funções de agregação
+12 - GROUP BY, HAVING e ORDER BY
