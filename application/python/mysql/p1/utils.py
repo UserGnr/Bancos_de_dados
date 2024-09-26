@@ -1,3 +1,6 @@
+import MySQLdb
+
+
 def conectar():
     """
     Função para conectar ao servidor
