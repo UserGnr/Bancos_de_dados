@@ -1,0 +1,8 @@
+# Ambiente virtual
+venv/
+
+# Arquivos compilados Python
+__pycache__/
+
+# Arquivos de log e temporários
+*.log
