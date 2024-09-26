@@ -65,3 +65,8 @@ t5 - SQLite
 12 - GROUP BY, HAVING e ORDER BY
 13 - Data e hora
 14 - Subconsultas
+
+t6 - Mongo DB
+t7 - Redis
+t8 - CouchDB
+t9 - Firebase
