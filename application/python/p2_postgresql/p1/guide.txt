@@ -1,7 +1,11 @@
 Aplicações:
 
 Python
-1 - mysql
+mysql
     p1 - Projeto 1:
         Essa é uma aplicação simples no banco de dados. Nela é criado um banco de dados e uma tabela no MySQL e as ações de criação, atualização, deleção e listagem é realizada através do terminal.
+
+postgresql
+    p1 - Projeto 1:
+        Essa é uma aplicação simples no banco de dados. Nela é criado um banco de dados e uma tabela no PostgreSQL e as ações de criação, atualização, deleção e listagem é realizada através do terminal.
         
